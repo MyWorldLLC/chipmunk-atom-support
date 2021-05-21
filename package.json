@@ -1,11 +1,10 @@
 {
-  "name": "textmate-editor-support",
-  "main": "./lib/textmate-editor-support",
-  "version": "1.0.0",
+  "name": "language-chipmunk",
+  "version": "0.0.0",
   "description": "Syntax Highlighting & Folding for Chipmunk",
   "keywords": [
   ],
-  "repository": "https://github.com/myworldllc/textmate-editor-support",
+  "repository": "https://github.com/myworldllc/chipmunk-editor-support",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
