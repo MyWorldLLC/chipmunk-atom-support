@@ -1,0 +1,133 @@
+
+scopeName: 'source.chipmunk'
+name: 'Chipmunk'
+fileTypes: [
+  'chp'
+]
+foldingStartMarker: '{'
+foldingStopMarker: '}'
+patterns: [
+  # Comments
+  {
+    begin: '#'
+    end: '$'
+    name: 'comment.line.number-sign'
+  }
+  # Literals
+  {
+    match: '\\b(?<!\\$)(true|false|null)(?![a-zA-Z0-9_])'
+    name: 'constant.language'
+  }
+  {
+    match: '\\b(?<!\\$)(0b|0B)[01_]+'
+    name: 'constant.numeric.binary.chipmunk'
+  }
+  {
+    match: '\\b(?<!\\$)(0o|0O)[0-7_]+'
+    name: 'constant.numeric.octal.chipmunk'
+  }
+  {
+    match: '\\b(?<!\\$)(0x|0X)[a-fA-F0-9_]+'
+    name: 'constant.numeric.hex.chipmunk'
+  }
+  {
+    match: '\\b(?<!\\$)[0-9]*\\.[0-9]+((e|E)-?[0-9]+)?'
+    name: 'constant.numeric.float.chipmunk'
+  }
+  {
+    match: '\\b(?<!\\$)[0-9][0-9]*'
+    name: 'constant.numeric.integer.chipmunk'
+  }
+  {
+    begin: '"'
+    end: '"'
+    name: 'string.quoted.double.chipmunk'
+    beginCaptures: {
+      0: {
+        name: 'punctuation.definition.string.begin.chipmunk'
+      }
+    }
+    endCaptures: {
+      0: {
+        name: 'punctuation.definition.string.end.chipmunk'
+      }
+    }
+    patterns: [
+      {
+        match: '\\\\.'
+        name: 'constant.character.escape.chipmunk'
+      }
+    ]
+  }
+  {
+    begin: '\''
+    end: '\''
+    name: 'string.quoted.single.chipmunk'
+    beginCaptures: {
+      0: {
+        name: 'punctuation.definition.string.begin.chipmunk'
+      }
+    }
+    endCaptures: {
+      0: {
+        name: 'punctuation.definition.string.end.chipmunk'
+      }
+    }
+    patterns: [
+      {
+        match: '\\\\.'
+        name: 'constant.character.escape.chipmunk'
+      }
+    ]
+  }
+  # General keywords
+  {
+    match: '\\W?\\bmodule(?![a-zA-Z0-9_])'
+    name: 'keyword'
+  }
+  {
+    match: '\\W?\\bimport(?![a-zA-Z0-9_])'
+    name: 'keyword'
+  }
+  {
+    match: '\\W?\\bclass(?![a-zA-Z0-9_])'
+    name: 'storage.type.class'
+  }
+  {
+    match: '\\b(?<!\\$)(var|trait|shared)(?![a-zA-Z0-9_])'
+    name: 'storage.type.var'
+  }
+  {
+    match: '\\b(?<!\\$)def(?![a-zA-Z0-9_])'
+    name: 'storage.type.function'
+  }
+  # Control flow
+  {
+    match: '\\b(?<!\\$)(continue|break|return|throw)(?![a-zA-Z0-9_])'
+    name: 'keyword.control'
+  }
+  # Loops
+  {
+    match: '\\b(?<!\\$)(for|while)(?![a-zA-Z0-9_])'
+    name: 'keyword.control'
+  }
+  # Conditionals
+  {
+    match: '\\b(?<!\\$)(if|else)(?![a-zA-Z0-9_])'
+    name: 'keyword.control'
+  }
+  # Try/catch/finally
+  {
+    match: '\\b(?<!\\$)(try|catch|finally)(?![a-zA-Z0-9_])'
+    name: 'keyword.control'
+  }
+  # Keyword Operators
+  {
+    match: 'new(?![a-zA-Z0-9_])'
+    name: 'keyword.operator'
+  }
+  {
+    match: '\\b(?<!\\$)(as|in|is|instanceof)(?![a-zA-Z0-9_])'
+    name: 'keyword.operator'
+  }
+]
