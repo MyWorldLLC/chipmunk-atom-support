@@ -94,7 +94,7 @@ patterns: [
     name: 'storage.type.class'
   }
   {
-    match: '\\b(?<!\\$)(var|trait|shared)(?![a-zA-Z0-9_])'
+    match: '\\b(?<!\\$)(var|trait|shared|self)(?![a-zA-Z0-9_])'
     name: 'storage.type.var'
   }
   {
