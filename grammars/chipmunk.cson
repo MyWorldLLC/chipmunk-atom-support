@@ -90,6 +90,10 @@ patterns: [
     name: 'keyword'
   }
   {
+    match: '\\W?\\bfrom(?![a-zA-Z0-9_])'
+    name: 'keyword'
+  }
+  {
     match: '\\W?\\bclass(?![a-zA-Z0-9_])'
     name: 'storage.type.class'
   }
